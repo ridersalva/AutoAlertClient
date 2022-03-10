@@ -13,7 +13,7 @@ function Navbar() {
 
   const [show, setShow] = useState(false)
   const controlNavbar = () => {
-    if (window.scrollY < 290) {
+    if (window.scrollY < 190) {
       setShow(true)
     } else {
       setShow(false)

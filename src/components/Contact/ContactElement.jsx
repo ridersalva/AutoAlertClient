@@ -4,7 +4,7 @@ import './Contact.css'
 import lost from './lost.jpg'
 import Footer  from "../Footer/Footer"
 import alertService from '../../services/alert.service'
-import { Navigate, useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 import { MessageContext } from '../../context/userMessage.context'
 
 function ContactElement() {
@@ -14,7 +14,7 @@ const [contactData,setContactData]=useState({
     email:""
 })
 
-const navigate=useNavigate()
+const navigate = useNavigate()
 const {setMessageInfo,setShowMessage}=useContext(MessageContext)
 
 const { text , email}=contactData
@@ -38,8 +38,11 @@ const { text , email}=contactData
             .then(({ data }) => {
                 setShowMessage(true)
                 setMessageInfo({ title: 'Success', desc: 'our team will contact you soon' })
-               navigate('/user')
+             
             })
+            .then(()=>{
+                console.log("yeahhhhhhhh")
+                navigate("/user")})
             .catch(err => console.log(err))
     }
 
