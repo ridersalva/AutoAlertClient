@@ -16,9 +16,10 @@ const AppRoutes = () => {
             <Route path="/user" element={<PrivateRoute />}>
                 <Route path="/user" element={<HomePage />} />
                 <Route path="/user/vehicles" element={<VehiclePage />} />
-            </Route>
-            <Route path="contact" element={<Contact />} />
+                <Route path="/user/contact" element={<Contact />} />
 
+            </Route>
+           
             <Route path="*" element={<ErrorPage/>}/>
         </Routes>
     )

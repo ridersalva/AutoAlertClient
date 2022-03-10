@@ -13,7 +13,7 @@ function Navbar() {
 
   const [show, setShow] = useState(false)
   const controlNavbar = () => {
-    if (window.scrollY < 1090) {
+    if (window.scrollY < 290) {
       setShow(true)
     } else {
       setShow(false)
@@ -34,9 +34,9 @@ function Navbar() {
 
       <Nav className={`active ${show && 'hidden'}`} >
         <p> To know more plase Click the links </p>
-        <ExternalLink href="https://www.ironhack.com/es/contacto" ><Image src={ih} alt='Iron Hack logo' /></ExternalLink>
-        <ExternalLink href="https://www.instagram.com/ironhackmad/" ><Image src={insta} alt='Iron Hack logo' /></ExternalLink>
-        <Link to="/contact" ><p>Contact</p></Link>
+        <ExternalLink href="https://www.ironhack.com/es/contacto" ><Image className='Logg' src={ih} alt='Iron Hack logo' /></ExternalLink>
+        <ExternalLink href="https://www.instagram.com/ironhackmad/" ><Image className='Logg' src={insta} alt='Iron Hack logo' /></ExternalLink>
+        <Link to="/user/contact" ><p>Contact</p></Link>
       </Nav>
 
     </NavigationBar></> : <></>}</>
