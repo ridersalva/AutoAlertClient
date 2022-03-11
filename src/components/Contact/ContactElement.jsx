@@ -39,7 +39,7 @@ function ContactElement() {
                 setShowMessage(true)
                 setMessageInfo({ title: 'Success', desc: 'our team will contact you soon' })
                 console.log("yeahhhhhhhh")
-                navigate("/")
+                navigate("/user")
             })
         
             .catch(err => console.log(err))
